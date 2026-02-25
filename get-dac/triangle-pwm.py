@@ -11,7 +11,7 @@ if __name__ == "__main__":
         amplitude = float(input("Введите амплитуду: "))
         signal_frequency = float(input("Введите частоту сигнала: "))
         sampling_frequency = float(input("Введите частоту дискретизации: "))
-        dac = pd.PWM_DAC(12, 500, 3.3, True)
+        dac = pd.PWM_DAC(12, 3000, 3.3, True)
         n = 0
         while True:
             voltage = amplitude*sg.get_trig_wave_amplitude(signal_frequency, 1/sampling_frequency*n)
